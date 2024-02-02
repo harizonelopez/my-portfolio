@@ -1,0 +1,92 @@
+{% extends "base.html" %} 
+{% block title %} Help page {% endblock %} 
+
+{% block content %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 1em;
+        background-color: #1e2229;
+        color: purple;
+    }
+
+    section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #373c49;
+        color: #61dafb;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    footer {
+      background-color: #1e2229;
+      text-align: center;
+      padding: 0em 0;
+      position: fixed;
+      bottom: 0;
+      width: 51%;
+    }
+
+</style>
+
+    <section>
+    <form method = "POST">    
+      <h4 align = "center">I'm sorry if you might have found a difficulty while reviewing the portfolio, please give the concern you might need or an enquiry you want me to address.</h4>
+      <h4 align = "center">The Feedback are responded instantly.</h4> 
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email" required
+          placeholder="Enter your email Address here...."
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">The Message:</label>
+         <input
+          type="message"
+          class="form-control"
+          id="message" 
+          columns="4"
+          name="message" required 
+          placeholder= "Enter your enquiry or feedback here...."
+         />
+      </div>
+      <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+    </section>
+
+    <section>
+        <form method = "GET">
+        <h4 align = "center">If you encounter a problem of finding a certain type of information, you can search it here.</h4>
+        <h4 align = "center">Type your search here....</h4>
+        <div class="form-group">
+            <label align = "center" for = "search" > Search here:</label>
+             <input
+              type="text"
+              class="form-control"
+              id="text" 
+              columns="4"
+              name="text" required 
+              placeholder= "Start typing here...."
+             />
+        </div>
+        <button type="submit" class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+             </svg> Search 
+        </button>
+
+          <footer>
+            <p>&copy;2024 Dev_aladinh production.</p>
+          </footer>
+
+        </form>
+    </section>
+
+    {% endblock %}

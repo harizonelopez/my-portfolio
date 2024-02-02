@@ -1,0 +1,149 @@
+
+{% extends "base.html" %} 
+{% block title %} Home page {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c35;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1e2229;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1, h2 {
+            color: #61dafb;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #a4acc4;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #373c49;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #1e2229;
+            color: pink;
+            text-align: center;
+            padding: 0em 0;
+            position: fixed;
+            bottom: 0;
+            width: 75%;
+        }
+
+        a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #61dafb;
+        }
+
+        .project h3 {
+            color: #61dafb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>Harizone Lopez</p>
+        <p>Junior Software developer</p>
+    </header>
+
+    <section>
+        <h1> J.A .R.V.I.S </h1>
+        <img src="{{ url_for('static', filename='dax.jpg') }}" alt="My Image">
+    </section>
+
+    <section>
+        <h1> E.D.I.T.H </h1>
+        <img src = "{{ url_for('static', filename='dni.jpg') }}" alt="My Image">
+    </section>
+
+    <section>
+        <h2>About Me</h2>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+              <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+            </svg> I'm a junior Software developer currently undertaking a bachelors degree in Computer Science at one of the main Universities in Kenya, currently I'm in my 3rd year of study.</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+              <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+            </svg> I'm basically from Kenya, Nairobi city in specific</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+              <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+            </svg> I have an intership experience of about 1 year in working in an IT industrial field as a backend Software developer mainly using the techstack of django & flask.</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+            </svg> I have deep skills in 
+                <li>->Python flask.</li>
+                <li>->Python django</li>
+                <li>->html5</li>
+                <li>->Css3</li>
+                <li>->Aws</li>
+                <li>->RestApi</li> </p>    
+    </section>
+
+    <section>
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3><a href="#" target="_blank">My Top Rated Projects.</a></h3>
+            <p>1. A text editor platform.</p>
+            <p>2. My Portfolio</p>
+            <p>3. A music player app</p>
+            <p>4. Password generator app</p>
+            <p>5. A Number guess game</p>
+            <p>6. A Hook-up validator app</p>
+            <p>7. A Registration form</p>
+            <p>8. Hang'man game</p>
+            <p>9. A Weather clone app</p>
+            <p>10. A Calculator app</p>
+            <P>11. An adventure game </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:harizonelopez23@gmail.com">harizonelopez23@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/harizone-lopez-a267b625b" target="_blank">https://www.linkedin.com/in/harizone-lopez-a267b625b</a></p>
+        <p>GitHub: <a href="https://github.com/harizonelopez" target="_blank">github.com/harizonelopez</a></p>
+    </section>
+
+    <footer>
+        <p>&copy;2024 Dev_aladinh production.</p>
+    </footer>
+
+</body>
+
+</html>
+
+{% endblock %}
+
+   
