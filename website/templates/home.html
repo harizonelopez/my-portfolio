@@ -29,13 +29,18 @@
             color: #61dafb;
         }
 
-        p {
+        h3 {
+            line-height: 1.6;
+            color: #FF1493;
+        }
+
+        p, li {
             line-height: 1.6;
             color: #a4acc4;
         }
 
         section {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #373c49;
@@ -58,12 +63,12 @@
         }
 
         a {
-            color: #61dafb;
+            color: #00FF00;
             text-decoration: none;
         }
 
         a:hover {
-            border-bottom: 2px solid #61dafb;
+            border-bottom: 2px solid #FF6347;
         }
 
         .project h3 {
@@ -75,46 +80,41 @@
 <body>
 
     <header>
-        <p>Harizone Lopez</p>
-        <p>Junior Software developer</p>
+        <h3>Harizone Lopez</h3>
+        <h3>Junior Software developer</h3>
     </header>
 
     <section>
+        <div>
         <h1> J.A .R.V.I.S </h1>
-        <img src="{{ url_for('static', filename='dax.jpg') }}" alt="My Image">
-    </section>
-
-    <section>
-        <h1> E.D.I.T.H </h1>
-        <img src = "{{ url_for('static', filename='dni.jpg') }}" alt="My Image">
-    </section>
-
-    <section>
+        <img src="{{ url_for('static', filename='dni.jpg') }}" alt="My Image" style="float: left; margin-right: 20px; width: 300px; height: 450px;">
+    
         <h2>About Me</h2>
         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
               <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-            </svg> I'm a junior Software developer currently undertaking a bachelors degree in Computer Science at one of the main Universities in Kenya, currently I'm in my 3rd year of study.</p>
+            </svg> Hello! I'm Harison Otieno, a dedicated Junior Software Developer with a passion for backend development. My expertise includes Python, AWS, HTML, Django, Flask, and CSS. With a year of internship experience, I've honed my skills in crafting robust and scalable solutions.</p>
         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
               <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-            </svg> I'm basically from Kenya, Nairobi city in specific</p>
+            </svg> I'm currently undertaking my bachelors degree in Computer Science at one of the main Universities in Kenya, currently I'm in my 1st year of study programme.</p>
         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
               <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-            </svg> I have an intership experience of about 1 year in working in an IT industrial field as a backend Software developer mainly using the techstack of django & flask.</p>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
-            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-            </svg> I have deep skills in 
-                <li>->Python flask.</li>
-                <li>->Python django</li>
-                <li>->html5</li>
-                <li>->Css3</li>
-                <li>->Aws</li>
-                <li>->RestApi</li> </p>    
+            </svg> I'm basically from Nairobi, Kenya to be specific.</p>
+        </div>
+            <section>
+            <h2>I have deep skills in </h2>
+            <ol>
+                <li>   Python Flask.</li>
+                <li> Python Django</li>
+                <li> HTML5</li>
+                <li> CSS3</li>
+                <li> AWS</li>
+            </ol>
+            </section>
     </section>
 
     <section>
-        <h2>My Projects</h2>
+        <h2>My Top Rated Projects</h2>
         <div class="project">
-            <h3><a href="#" target="_blank">My Top Rated Projects.</a></h3>
             <p>1. A text editor platform.</p>
             <p>2. My Portfolio</p>
             <p>3. A music player app</p>
