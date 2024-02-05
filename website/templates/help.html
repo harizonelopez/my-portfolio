@@ -2,64 +2,78 @@
 {% block title %} Help page {% endblock %} 
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+
+  <style>
     body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 1em;
+      display: flex;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #282c35;
+      color: #fff;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+      }
+
+      section {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #373c49;
+          color: #61dafb;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+      }
+
+      footer {
         background-color: #1e2229;
-        color: purple;
-    }
+        text-align: center;
+        padding: 0em 0;
+        position: fixed;
+        bottom: 0;
+        width: 49%;
+      }
 
-    section {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #373c49;
-        color: #61dafb;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-    }
+  </style>
 
-    footer {
-      background-color: #1e2229;
-      text-align: center;
-      padding: 0em 0;
-      position: fixed;
-      bottom: 0;
-      width: 51%;
-    }
-
-</style>
+<body>
+  <section>
 
     <section>
-    <form method = "POST">    
-      <h4 align = "center">I'm sorry if you might have found a difficulty while reviewing the portfolio, please give the concern you might need or an enquiry you want me to address.</h4>
-      <h4 align = "center">The Feedback are responded instantly.</h4> 
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email" required
-          placeholder="Enter your email Address here...."
-        />
-      </div>
-      <div class="form-group">
-        <label for="message">The Message:</label>
-         <input
-          type="message"
-          class="form-control"
-          id="message" 
-          columns="4"
-          name="message" required 
-          placeholder= "Enter your enquiry or feedback here...."
-         />
-      </div>
-      <button type="submit" class="btn btn-primary"> Submit </button>
-    </form>
+      <form method = "POST">    
+        <h4 align = "center">I'm sorry if you might have found a difficulty while reviewing the portfolio, please give the concern you might need or an enquiry you want me to address.</h4>
+        <h4 align = "center">The Feedback are responded instantly.</h4> 
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email" required
+            placeholder="Enter your email Address here...."
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">The Message:</label>
+          <input
+            type="message"
+            class="form-control"
+            id="message" 
+            columns="4"
+            name="message" required 
+            placeholder= "Enter your enquiry or feedback here...."
+          />
+        </div>
+        <button type="submit" class="btn btn-primary"> Submit </button>
+      </form>
     </section>
 
     <section>
@@ -89,4 +103,8 @@
         </form>
     </section>
 
-    {% endblock %}
+  </section>
+</body>
+</html>
+
+{% endblock %}
