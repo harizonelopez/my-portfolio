@@ -12,8 +12,11 @@ def login():
     return render_template("login.html")
     
     
-@auth.route('/logout')
+@auth.route('/logout', methods = 'POST', 'GET')
 def logout():
+    if request.method == 'POST':
+        return redirect(url_for('views.home'))
+        
     return render_template("logout.html")
         
         
@@ -27,13 +30,13 @@ def help():
         message = request.form.get('message')
         
         if len(email) < 5:
-            flash('Email must be greater than 5 characters.', category = 'error')
+            flash('An Email must have more than 5 characters.', category = 'error')
             
         elif len(message) < 2:
-            flash('The message must be greater than 2 characters.', category = 'error')
+            flash('The message text must have more than 1 characters.', category = 'error')
             
         else:
-            flash('message sent succesfully')
+            flash('Your message has been sent succesfully.')
             
     return render_template("help.html")
     
