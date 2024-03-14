@@ -4,7 +4,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 auth = Blueprint('auth', __name__)
 
-@auth.route('/login', methods = ['POST', 'GET'])
+@auth.route('/login', methods = ['GET', 'POST'])
 def login():
     if request.method == 'POST':
         return redirect(url_for('views.home'))
@@ -12,7 +12,7 @@ def login():
     return render_template("login.html")
     
     
-@auth.route('/logout', methods = 'POST', 'GET')
+@auth.route('/logout', methods = ['GET', 'POST')
 def logout():
     if request.method == 'POST':
         return redirect(url_for('views.home'))
