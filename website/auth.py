@@ -1,10 +1,9 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 
-
 auth = Blueprint('auth', __name__)
 
-@auth.route('/about_info', methods = ['GET', 'POST'])
+@auth.route('/about_info', methods=['GET', 'POST'])
 def about_info():
     if request.method == 'POST':
         return redirect(url_for('views.home'))
@@ -12,7 +11,7 @@ def about_info():
     return render_template("info.html")
     
     
-@auth.route('/project', methods = ['GET', 'POST')
+@auth.route('/project', methods=['GET', 'POST')
 def project():
     if request.method == 'POST':
         return redirect(url_for('views.home'))
@@ -20,7 +19,7 @@ def project():
     return render_template("projects.html")
         
         
-@auth.route('/help',  methods = ['GET', 'POST'])
+@auth.route('/help',  methods=['GET', 'POST'])
 def help():
     data = request.form
     print(data)
