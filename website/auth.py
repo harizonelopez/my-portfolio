@@ -10,14 +10,12 @@ def about_info():
         
     return render_template("info.html")
     
-    
 @auth.route('/project', methods=['GET', 'POST')
 def project():
     if request.method == 'POST':
         return redirect(url_for('views.home'))
         
     return render_template("projects.html")
-        
         
 @auth.route('/help',  methods=['GET', 'POST'])
 def help():
@@ -38,4 +36,3 @@ def help():
             flash('Your message has been sent succesfully.')
             
     return render_template("help.html")
-    
